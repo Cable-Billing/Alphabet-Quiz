@@ -15,25 +15,32 @@ public class Question {
     public Question() {
         alphabet = new Alphabet();
         questions = new ArrayList<>();
-            questions.add("A word ending int 'ing'");                   questions.add("Something made of wood");
-            questions.add("A fruit");                                   questions.add("A pet's name");
-            questions.add("A children's toy");                          questions.add("Something found in the kitchen");
-            questions.add("A female's name");                           questions.add("Something you would find in the garden");
-            questions.add("A street name");                             questions.add("A foreign capital city");
-            questions.add("A country");                                 questions.add("A book of the Bible");
-            questions.add("A Bible name");                              questions.add("A place in the Bible");
-            questions.add("A book's name");                             questions.add("A TV series");
-            questions.add("A word containing 'oo'");                    questions.add("A word containing 'll'");
-            questions.add("Something you would find in the shed");      questions.add("A tool");
-            questions.add("A part of the body");                        questions.add("A part of a car");
-            questions.add("A colour");                                  questions.add("A piece of furniture");
-            questions.add("A word containing a 'j'");                   questions.add("A musical instrument");
-            questions.add("Something you would find in the office");    questions.add("A drink");
-            questions.add("An element");                                questions.add("A metal");
-            questions.add("A liquid");                                  questions.add("An animal");
-            questions.add("A Mammal");                                  questions.add("An aquatic animal");
-            questions.add("A vegetable");                               questions.add("A model of car");
-        currentQuestion = questions.get(new Random().nextInt(questions.size())) + " starting with ";
+            questions.add("a word ending int 'ing'");                   questions.add("something made of wood");
+            questions.add("a fruit");                                   questions.add("a pet's name");
+            questions.add("a children's toy");                          questions.add("something found in the kitchen");
+            questions.add("a female's name");                           questions.add("something you would find in the garden");
+            questions.add("a street name");                             questions.add("a foreign capital city");
+            questions.add("a country");                                 questions.add("a book of the Bible");
+            questions.add("a Bible name");                              questions.add("a place in the Bible");
+            questions.add("a title of a book");                         questions.add("a TV series");
+            questions.add("a word containing 'oo'");                    questions.add("a word containing 'll'");
+            questions.add("something you would find in the shed");      questions.add("a tool");
+            questions.add("a part of the body");                        questions.add("a part of a car");
+            questions.add("a colour");                                  questions.add("a piece of furniture");
+            questions.add("a word containing a 'j'");                   questions.add("a musical instrument");
+            questions.add("something you would find in the office");    questions.add("a drink");
+            questions.add("an element");                                questions.add("a metal");
+            questions.add("a liquid");                                  questions.add("an animal");
+            questions.add("a Mammal");                                  questions.add("an aquatic animal");
+            questions.add("a vegetable");                               questions.add("a model of car");
+            questions.add("a board game");                              questions.add("something you would find in a classroom");
+            questions.add("a sport");                                   questions.add("a video game");
+            questions.add("an unhealthy snack");                        questions.add("something you would find in a forest");
+            questions.add("a song");                                    questions.add("a singer");
+            questions.add("a famous composer");                         questions.add("a hobby");
+            questions.add("something that you would find on a farm");   questions.add("a word ending in 'ion'");
+            questions.add("a word containing 'ch'");                    questions.add("a word containing 'sh'");
+        currentQuestion = "Name " + questions.get(new Random().nextInt(questions.size())) + " starting with ";
     }
 
     /**
@@ -41,7 +48,7 @@ public class Question {
      * @return String
      */
     public String nextQuestion() {
-        currentQuestion = questions.get(new Random().nextInt(questions.size())) + " starting with ";
+        currentQuestion = "Name " + questions.get(new Random().nextInt(questions.size())) + " starting with ";
         return currentQuestion + alphabet.randomLetter();
     }
 
